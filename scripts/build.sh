@@ -8,4 +8,4 @@ else
 fi
 
 cd ${homedir}/site
-bundle exec jekyll --destination ${homedir}/parse/public
+bundle exec jekyll build --destination ${homedir}/parse/public

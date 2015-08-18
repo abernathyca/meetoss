@@ -9,6 +9,8 @@ fi
 
 workingdir=${homedir}/parse
 
+cd $workingdir
+
 sed -e 's/PARSE_APP_NAME/'"${PARSE_APP_NAME}"'/g' \
     -e 's/PARSE_CLI_VERSION/'"${PARSE_VERSION}"'/g' \
     -e 's/PARSE_APPLICATION_ID/'"${PARSE_APPLICATION_ID}"'/g' \
@@ -17,3 +19,4 @@ sed -e 's/PARSE_APP_NAME/'"${PARSE_APP_NAME}"'/g' \
 
 parse deploy
 
+cd $homedir

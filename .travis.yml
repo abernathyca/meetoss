@@ -7,3 +7,4 @@ php:
 - hhvm
 install: curl -s https://www.parse.com/downloads/cloud_code/installer.sh | sudo /bin/bash
 script: phpunit Test.php
+after_success: ./scripts/deploy.sh

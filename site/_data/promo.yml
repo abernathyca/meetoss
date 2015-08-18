@@ -1,0 +1,7 @@
+- type: button
+  href: /bistro/docs/getting-started/
+  text: Get Started
+
+- type: button
+  href: static/bistro_ATC_final.pdf
+  text: USENIX ATC'15 Paper

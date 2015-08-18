@@ -1,0 +1,53 @@
+# Site settings
+permalink: /blog/:year/:month/:day/:title/
+title: Bistro
+tagline: A toolkit for making services that schedule and execute tasks.
+fbappid: ""
+gacode: "UA-44373548-11"
+description: Bistro is an engineer's tool &mdash; your clients need to do large amounts of computation, and your goal is to make a system that handles them easily, performantly, and reliably.
+baseurl: 
+url: https://ossbistro.parseapp.com
+ghrepo: "facebook/bistro"
+
+# Build settings
+markdown: kramdown  # redcarpet segfaults like crazy :'(
+highlighter: pygments
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:name/
+  support:
+    output: true
+    permalink: /support/
+
+sass:
+  style: :compressed
+
+# Currently unused, since we are on kramdown
+redcarpet:
+  extensions: [with_toc_data, smart]
+
+color:
+  # Provides colour for background of top header of homepage
+  primary: "#8a2023"
+  # Provides colour for background of elsewhere on site
+  secondary: "#e4e4e4"
+  # A color that will work for buttons laid on top of primary colour
+  light: "#c33c3f"
+  # Color that will work for text on top of light color
+  lighttext: "#fff"
+  # Color of text in the top header of homepage, must be legible on top of primary color
+  headertext: "#fff"
+  # Color of text on top of the secondary color background
+  bodytext: "#151515"
+  # Background of fixed nav header - headertext color is used for mini logo text
+  nav: "#7a1114"
+  # Text of links in the nav
+  navtext: "#ff6669"
+  # Color of link underlines in the main body, and hover background color for links
+  link: "#c33c3f"
+
+# Travis bundles all gems in the vendor directory on its build servers, which Jekyll will mistakenly read and explode on.
+exclude:
+ - vendor

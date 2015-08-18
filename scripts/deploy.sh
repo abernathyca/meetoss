@@ -7,10 +7,12 @@ else
   homedir=`pwd`
 fi
 
+workingdir=${homedir}/parse
+
 sed -e 's/PARSE_APP_NAME/'"${PARSE_APP_NAME}"'/g' \
-    -e 's/PARSE_CLI_VERSION/'"${PARSE_CLI_VERSION}"'/g' \
+    -e 's/PARSE_CLI_VERSION/'"${PARSE_VERSION}"'/g' \
     -e 's/PARSE_APPLICATION_ID/'"${PARSE_APPLICATION_ID}"'/g' \
-    -e 's/PARSE_MASTER_KEY/'"${PARSE_MASTER_KEY}"'/g' ${homedir}/config/template.json > ${homedir}/config/global.json
+    -e 's/PARSE_MASTER_KEY/'"${PARSE_MASTER_KEY}"'/g' ${workingdir}/config/template.json > ${workingdir}/config/global.json
 
 
 parse deploy

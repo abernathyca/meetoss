@@ -1,9 +1,14 @@
 language: ruby
+
 rvm:
--2.1
+- 2.1
+
 sudo: required
+
 install:
   - curl -s https://www.parse.com/downloads/cloud_code/installer.sh | sudo /bin/bash
   - cd ./site/ && bundle install && cd ../
+
 script: ./scripts/build.sh
+
 #after_success: ./scripts/deploy.sh

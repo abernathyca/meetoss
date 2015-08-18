@@ -1,8 +1,9 @@
 language: php
 sudo: required
+env: PARSE_CLI_VERSION="1.4.2"
 php:
-  - 5.5
-  - 5.4
-  - hhvm 
+- 5.5
+- 5.4
+- hhvm
 install: curl -s https://www.parse.com/downloads/cloud_code/installer.sh | sudo /bin/bash
 script: phpunit Test.php
